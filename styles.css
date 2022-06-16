@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@600&family=Great+Vibes&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 553px){
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .main-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .me-image img {
+        width: 75%;
+    }
+
+    .about-me .about-text {
+        width: 75%;
+    }
+
+    header .hamburger {
+        display: block;
+    }
+
+    header .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    
+    header .hamburger.active .bar:nth-child(1){
+       transform: translateY(8px) rotate(45deg);
+    }
+
+    header .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+     }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 100px;
+        flex-direction: column;
+        background-color: #F6F6F6;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+     }
+
+    .nav-menu.active {
+        margin: 0;
+    }
+
+}
+
+/* Header Styles */
+header {
+    background-color: #F6F6F6;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    font-family: 'Assistant', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: darkgrey;
+    text-transform: uppercase;
+    padding: 10px;
+    text-decoration: none;
+}
+
+header ul li a:hover {
+    color: black;
+    border-bottom: 0.1rem solid lightgray;
+}
+
+.name {
+    color: black;
+    font-size: 2.5rem;
+    font-family: 'Great Vibes', cursive;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: lightgray;
+}    
+
+/* Main Styles */
+.main-item {
+    background-image: url('images/home-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.main-item::before {
+    content: "BEFORE";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1.5rem;
+    z-index: 1;
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    background-color: white;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+i {
+    font-size: 2rem;
+    padding: 10px;
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+footer ul li a {
+    color: darkgrey;
+    text-transform: uppercase;
+    padding: 10px;
+    text-decoration: none;
+}
+
+footer ul li i:hover {
+    color: black;
+}
+
+footer p {
+    color: gray;
+    padding: 10px;
+}
+
+/* About Styles */
+.about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    flex-wrap: wrap;
+}
+
+.me-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.me-image img {
+    padding: 10px;
+    border-radius: 5rem;
+    width: 55%;
+}
+
+.about-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    text-align: justify;
+}
+
+.about-text p {
+    font-size: 1.25rem;
+    line-height: 2;
+}
+
+.about-text h1 {
+    font-size: 2rem;
+}
+
+.more-abt-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.more-abt-me h1 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.more-abt-me ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.more-abt-me ul li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    background-color: lightgray;
+    border-radius: 0.5rem;
+    box-shadow: 3px 4px 4px gray;
+}
+
+.more-abt-me p {
+    padding-top: 10px;
+    width: 300px;
+    height: 150px;
+    text-align: justify;
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+.more-abt-me img {
+    width: 300px;
+    height: 200px;
+}
+
+/* Portfolio Styles*/
+.recommendations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 100px;
+}
+
+.recommendations h1 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.recommendations ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.recommendations ul li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: lightgray;
+    border-radius: 0.5rem;
+    box-shadow: 2px 3px 3px gray;
+}
+
+.recommendations p {
+    width: 300px;
+    height: 200px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.recommendations p i {
+    font-size: 0.8rem;
+}
+
+.recommendations i {
+    color: grey;
+} 
+
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.projects h1 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.projects ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.projects ul li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.projects p {
+    width: 300px;
+    height: 100px;
+    font-size: 1.1rem;
+}
+
+.projects img {
+    width: 300px;
+    height: 200px;
+    border-radius: 0.5rem;
+}
+
+.projects img:hover {
+    transition: 0.5s;
+    opacity: 50%;
+    box-shadow: 3px 4px 4px gray;
+}
